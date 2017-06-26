@@ -105,25 +105,31 @@ main {
 			flex-flow: row wrap;
 			details {
 				width: 50%;
-				padding-bottom: 20px;
-				font-size: 20px;
-				line-height: 20px;
+				height: 120px;
+				font-size: 16px;
+				line-height: 16px;
+				padding-right: 30px;
+				box-sizing: border-box;
 				&:hover {
 					cursor: pointer;
 					text-decoration: underline;
 				}
 				summary {
+					display: flex;
+					flex-flow: row nowrap;
 					outline: none;
+					font-size: 20px;
+					line-height: 20px;
 					&::-webkit-details-marker {
 						display: none;
 					}
-					&:after {
+					&:before {
+						display: block;
 						background-color: @dark;
 						content: "+";
 						color: #fff;
-						float: left;
-						font-size: 1.6em;
-						line-height: 1em;
+						font-size: 30px;
+						line-height: 30px;
 						font-weight: bold;
 						margin: -5px 10px 0 0;
 						padding: 0;
@@ -132,7 +138,7 @@ main {
 						height: 30px;
 					}
 				}
-				&[open] summary:after {
+				&[open] summary:before {
 					content: "-";
 					line-height: 0.9em;
 				}
