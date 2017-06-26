@@ -1,0 +1,37 @@
+@dark: #445161;
+@grey: #f5f5f5;
+
+body {
+	background-color: #fff;
+	font-family: Arial, sans-serif;
+	font-weight: 400;
+}
+
+.content {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+.btn {
+	background-color: #fff;
+	color: @dark;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	text-align: center;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 700;
+	&:hover {
+		text-decoration: underline;
+		border-color: darken(@dark, 10%);
+		color: darken(@dark, 10%)
+	}
+	&:active {
+		border-color: lighten(@dark, 30%);
+		color: lighten(@dark, 30%)
+	}
+}
