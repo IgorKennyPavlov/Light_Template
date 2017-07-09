@@ -3,12 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Lesson #2</title>
+	<title>Hometask</title>
 	<!-- <link href="img/favicon.ico" rel="icon" type="image/x-icon"> -->
 	<link rel="stylesheet" type="text/css" href="styles/style.min.css">
 	<link rel="stylesheet" href="fa/css/font-awesome.min.css">
 </head>
 <body>
+	<audio id="music" src="audio/snd.mp3" autoplay loop muted></audio>
+	<video id="bgr" autoplay loop>
+		<source src="vid/video.mp4" type="video/mp4">
+	</video>
+	<button id="mute" onclick="mute()"><i id="mute-icon" class="fa fa-volume-off" aria-hidden="true"></i></button>
 	<div class="content">
 		<header>
 			<div class="head-left">
@@ -36,8 +41,11 @@
 					<p>Commodi, ex, officia. A qui expedita rem itaque quibusdam, alias error perspiciatis repellendus aut, deleniti autem sint perferendis. Ipsam ullam amet porro magni delectus esse, blanditiis non vitae earum explicabo?</p>
 				</article>
 				<div class="about-right">
-					<div class="about-image">
-						<a href="#"><img src="http://lorempixel.com/430/245" alt="About image"></a>
+					<div class="about-vid">
+						<video preload="auto" controls>
+							<source src="vid/video.mp4" type="video/mp4">
+							Your browser does not support the video tag. I suggest you upgrade your browser.
+						</video>
 					</div>
 				</div>
 			</section>
@@ -227,7 +235,12 @@
 				</div>
 			</div>
 		</footer>
-		<div class="copyright"><span>Copyright &#169; 2017 Productname PSD HTML CSS</span></div>
+		<div class="copyright"><span>Music: <a href="http://www.bensound.com">http://www.bensound.com</a></span></div>
 	</div>
+	<script src="mute.js"></script>
+<!-- 	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script> -->
 </body>
 </html>
