@@ -2,7 +2,6 @@ footer {
 	padding: 50px;
 	background-color: @dark;
 	color: #fff;
-	height: 500px;
 	.header {
 		text-align: center;
 		margin-bottom: 30px;
@@ -22,6 +21,9 @@ footer {
 				width: 500px;
 				display: flex;
 				flex-flow: column nowrap;
+				#firstName, #lastName {
+					text-transform: capitalize;
+				}
 				.form-field {
 					margin-bottom: 20px;
 					height: 40px;
@@ -32,10 +34,17 @@ footer {
 					background-color: #fff;
 					&:focus {
 						border: 3px solid darken(@dark, 90%);
+						&::-webkit-input-placeholder {
+							color: transparent;
+						}
+					}
+					&::-webkit-input-placeholder {
+						color: #000;
 					}
 				}
 				textarea.form-field {
 					height: 170px;
+					padding-top: 10px;
 				}
 				.btn {
 					margin:0 auto;

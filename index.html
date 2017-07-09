@@ -215,9 +215,22 @@
 			<div class="contact-wrap">
 				<div class="form-wrap">
 					<form action="#">
-						<input class="form-field" type="text" placeholder="Your name:">
-						<input class="form-field" type="email" id="email" placeholder="Your email:">
-						<textarea class="form-field" placeholder="Your message:"></textarea>
+						<label for="firstName">Your first name</label>
+						<input class="form-field" type="text" id="firstName" placeholder="Ivan" autofocus required>
+						<label for="lastName">Your last name</label>
+						<input class="form-field" type="text" id="lastName" placeholder="Ivanov" required>
+						<label for="email">Your email</label>
+						<input class="form-field" type="email" id="email" placeholder="address@email.com" required pattern="\S+@[a-z]+(\.[a-z]+)+">
+						<label for="telephone">Your mobile or local phone number</label>
+						<input class="form-field" id="telephone" placeholder="+7-999-777-77-77" required pattern="[\d-()+]">
+						<label for="year">Date of birth</label>
+						<input class="form-field" type="date" id="year">
+						<label for="gender">Gender</label>
+						<select class="form-field" name="gender" id="gender">
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+						<textarea class="form-field" placeholder="Your message"></textarea>
 						<input class="btn" type="submit" value="Submit">
 					</form>
 				</div>
